@@ -13,7 +13,7 @@ document.querySelector('.control span').onclick=function(){
     ArrayGames.forEach((game)=>game.classList.add('isflipped'))
     setTimeout(()=>{
     ArrayGames.forEach((game)=>game.classList.remove('isflipped'))
-    },2000)
+    },4000)
    //start the flipping    
 document.querySelector('.control').remove()
 setTimeout(()=>{
