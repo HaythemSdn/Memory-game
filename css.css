@@ -1,0 +1,50 @@
+.gameblock {
+    height: 150px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    position: relative;
+    flex: 1 0 200px ;
+    margin :0 8px 12px
+}
+.gameblocks.noClicking{
+    pointer-events: none;
+}
+.gameblock .front{
+    background-color: #333;
+    line-height: 200px;
+    border: 2px solid rgb(3, 193, 218);
+}
+.gameblock .back{
+    background-color: white;
+    border: 2px solid black;
+    transform: rotateY(180deg);
+}
+.gameblock .back img{
+    height: 120px;
+    width: 120px;
+    margin-top: 20px;
+}
+.gameblock .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    padding-bottom: 15px;
+}
+.gameblock .front::after{
+    content: '?';
+    font-size: 140px;
+    color: white;
+    font-weight: bold;
+}
+
+.gameblock.isflipped
+,.gameblock.areEqual{
+   -webkit-transform:rotateY(180deg) ;
+    -moz-transform:rotateY(180deg) ;
+    transform:rotateY(180deg) ;
+}
