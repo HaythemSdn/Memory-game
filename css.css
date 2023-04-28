@@ -48,3 +48,21 @@
     -moz-transform:rotateY(180deg) ;
     transform:rotateY(180deg) ;
 }
+
+@media (max-width: 991px) {
+.gameblock{
+    height: 60px;
+    flex: 1 0 60px;
+}
+.gameblock .front{
+    line-height: 50px;
+}
+.gameblock .back img{
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+.gameblock .front::after{
+    font-size: 40px;
+}
+}
